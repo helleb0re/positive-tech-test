@@ -22,9 +22,9 @@ struct DNSElement {
   std::string ip;
 };
 
-void TestAddAndGetData(DNSCache &dns_cache);
-void TestGetDataWithUpdate(DNSCache &dns_cache);
-void TestOverflowWithUpdate(DNSCache &dns_cache);
-void TestMultithreading(DNSCache &dns_cache);
+void TestAddAndGetData(dns::DNSCache &dns_cache);
+void TestGetDataWithUpdate(dns::DNSCache &dns_cache);
+void TestOverflowWithUpdate(dns::DNSCache &dns_cache);
+void TestMultithreading(dns::DNSCache &dns_cache);
 
 } // namespace test

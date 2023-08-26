@@ -2,6 +2,8 @@
 
 #include <string>
 
+namespace dns {
+
 class DNSCache {
 public:
   virtual void update(const std::string &name, const std::string &ip) = 0;
@@ -12,3 +14,5 @@ public:
 
   virtual ~DNSCache() = default;
 };
+
+} // namespace dns

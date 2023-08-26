@@ -8,7 +8,7 @@
 #include <unordered_map>
 #include <utility>
 
-using namespace std::literals;
+namespace dns {
 
 class DNSCacheSingleton {
 private:
@@ -63,3 +63,5 @@ private:
     std::shared_mutex m;
   };
 };
+
+} // namespace dns

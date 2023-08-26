@@ -2,7 +2,7 @@
 
 namespace test {
 
-void TestAddAndGetData(DNSCache &dns_cache) {
+void TestAddAndGetData(dns::DNSCache &dns_cache) {
   std::cout << "TestAddAndGetData\t"s;
 
   std::array<DNSElement, dns_cache_size> test_case{
@@ -27,7 +27,7 @@ void TestAddAndGetData(DNSCache &dns_cache) {
   std::cout << "OK" << std::endl;
 }
 
-void TestGetDataWithUpdate(DNSCache &dns_cache) {
+void TestGetDataWithUpdate(dns::DNSCache &dns_cache) {
   std::cout << "TestGetDataWithUpdate\t"s;
 
   DNSElement original_elem{"1.ru"s, "127.0.0.1"s};
@@ -50,7 +50,7 @@ void TestGetDataWithUpdate(DNSCache &dns_cache) {
   std::cout << "OK" << std::endl;
 }
 
-void TestOverflowWithUpdate(DNSCache &dns_cache) {
+void TestOverflowWithUpdate(dns::DNSCache &dns_cache) {
   std::cout << "TestOverflowWithUpdate\t"s;
 
   std::array<DNSElement, dns_cache_size * 2> test_case{
@@ -91,7 +91,7 @@ void TestOverflowWithUpdate(DNSCache &dns_cache) {
   std::cout << "OK" << std::endl;
 }
 
-void TestMultithreading(DNSCache &dns_cache) {
+void TestMultithreading(dns::DNSCache &dns_cache) {
   std::cout << "TestMultithreading\t"s;
 
   std::size_t thread_nums = 4;

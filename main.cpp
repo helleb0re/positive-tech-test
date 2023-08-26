@@ -1,7 +1,7 @@
 #include "src/dns_cache_impl.h"
 #include "src/test.h"
 
-void LaunchTests(DNSCache &dns_cache) {
+void LaunchTests(dns::DNSCache &dns_cache) {
   {
     test::TestAddAndGetData(dns_cache);
     dns_cache.clear();
@@ -24,6 +24,6 @@ void LaunchTests(DNSCache &dns_cache) {
 }
 
 int main() {
-  DNSCache &dns_cache = DNSCacheSingleton::getInstance(test::dns_cache_size);
+  dns::DNSCache &dns_cache = dns::DNSCacheSingleton::getInstance(test::dns_cache_size);
   LaunchTests(dns_cache);
 }

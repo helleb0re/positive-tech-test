@@ -2,6 +2,10 @@
 
 #include <stdexcept>
 
+namespace dns {
+
+using namespace std::literals;
+
 DNSCacheSingleton::DNSCacheImpl::DNSCacheImpl(std::size_t max_size)
     : max_size_{max_size}, store_{}, name_to_elem_{} {
   if (max_size == 0) {
@@ -49,3 +53,5 @@ void DNSCacheSingleton::DNSCacheImpl::UpdateStore(const std::string &name,
   name_to_elem_[name]->ip = ip;
   store_.splice(store_.end(), store_, name_to_elem_[name]);
 }
+
+} // namespace dns
