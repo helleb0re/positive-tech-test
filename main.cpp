@@ -1,5 +1,5 @@
-#include "dns_cache_impl.h"
-#include "test.h"
+#include "src/dns_cache_impl.h"
+#include "src/test.h"
 
 void LaunchTests(DNSCache &dns_cache) {
   {
